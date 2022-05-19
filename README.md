@@ -93,3 +93,7 @@ To setup a custom domain with namecheap:
 - Google Analytics: Set the UA variable in the .env file
 - [Enable newrelic on heroku](https://elements.heroku.com/addons/newrelic); setup a synthetic monitor for uptime (keeps the heroku app from going to sleep, and is good to know if your site is down)
 - Setup up time pinger with some service for heroku
+
+# Troubleshooting
+- If you run into a puma error like the below, just run `touch tmp/pids/server.pid`
+```/Users/elijahmurray/.rvm/gems/ruby-2.7.4/gems/puma-4.3.12/lib/puma/launcher.rb:377:in `stat': No such file or directory @ rb_file_s_stat - /Users/elijahmurray/Development/Personal/brick-investor/brickinvestor (Errno::ENOENT)```
